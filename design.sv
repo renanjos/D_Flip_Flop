@@ -7,12 +7,12 @@ module D_Flip_Flop(
   
   always_ff @(posedge clk) begin
     
-    if (!rst) data_out = 0;
+    if (!rst) data_out <= 0;
     
     else begin
     
-    data_out = data_in;
-    not_data_out = ~data_in;
+    data_out <= data_in;
+    not_data_out <= ~data_in;
       
     end
     
